@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPhone Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+.calculator {
+  width: 320px;
+  background: #000;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+}
+
+.display {
+  color: white;
+  font-size: 4rem;
+  text-align: right;
+  padding: 30px 20px 20px;
+  background: #000;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px 15px 20px;
+}
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  color: white;
+  background: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+.btn.gray {
+  background: #a5a5a5;
+  color: black;
+}
+
+.btn.orange {
+  background: #f1a33b;
+  color: white;
+}
+
+.btn.dark {
+  background: #333333;
+}
+
+.zero {
+  grid-column: span 2;
+  width: 100%;
+  border-radius: 50px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button class="btn gray">AC</button>
+      <button class="btn gray">+/-</button>
+      <button class="btn gray">%</button>
+      <button class="btn orange">÷</button>
+
+      <button class="btn dark">7</button>
+      <button class="btn dark">8</button>
+      <button class="btn dark">9</button>
+      <button class="btn orange">×</button>
+
+      <button class="btn dark">4</button>
+      <button class="btn dark">5</button>
+      <button class="btn dark">6</button>
+      <button class="btn orange">−</button>
+
+      <button class="btn dark">1</button>
+      <button class="btn dark">2</button>
+      <button class="btn dark">3</button>
+      <button class="btn orange">+</button>
+
+      <button class="btn zero dark">0</button>
+      <button class="btn dark">.</button>
+      <button class="btn orange">=</button>
+    </div>
+  </div>
+</body>
+</html>
